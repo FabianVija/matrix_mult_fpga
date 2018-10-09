@@ -1,0 +1,27 @@
+23:14:11 **** Auto Build of configuration Debug for project matrix_mult_processor ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_processor_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:23:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0;
+      ^
+Finished building: ../src/main.c
+ 
+Building target: matrix_mult_processor.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_processor_bsp/ps7_cortexa9_0/lib -o "matrix_mult_processor.elf"  ./src/main.o ./src/matrix_mult.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: matrix_mult_processor.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size matrix_mult_processor.elf  |tee "matrix_mult_processor.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19576	   1144	  22568	  43288	   a918	matrix_mult_processor.elf
+Finished building: matrix_mult_processor.elf.size
+ 
+
+23:14:12 Build Finished (took 314ms)
+

@@ -1,0 +1,338 @@
+
+**** Build of configuration Debug for project matrix_mult_processor ****
+
+Nothing to build for project matrix_mult_processor
+
+****  of configuration Debug for project matrix_mult_processor ****
+
+Nothing to build for project matrix_mult_processor
+
+****  of configuration Debug for project matrix_mult_processor ****
+
+Nothing to build for project matrix_mult_processor
+23:06:09 **** Auto Build of configuration Debug for project matrix_mult_processor ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_processor_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: matrix_mult_processor.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_processor_bsp/ps7_cortexa9_0/lib -o "matrix_mult_processor.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../matrix_mult_processor_bsp/ps7_cortexa9_0/lib/libxil.a(xil-crt0.o): In function `_start':
+/home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/mult_in_processor/mult_in_processor.sdk/matrix_mult_processor_bsp/ps7_cortexa9_0/libsrc/standalone_v6_7/src/xil-crt0.S:142: undefined reference to `main'
+makefile:39: recipe for target 'matrix_mult_processor.elf' failed
+collect2: error: ld returned 1 exit status
+make: *** [matrix_mult_processor.elf] Error 1
+23:06:16 **** Auto Build of configuration Debug for project matrix_mult_processor ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_processor_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:1:0:
+../src/matrix_mult.h:5:1: error: unknown type name 'using'
+ using namespace std;
+ ^~~~~
+../src/matrix_mult.h:5:17: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'std'
+ using namespace std;
+                 ^~~
+../src/main.c: In function 'main':
+../src/main.c:5:6: warning: unused variable 'a' [-Wunused-variable]
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+  int a = 0;
+      ^
+make: *** [src/main.o] Error 1
+23:06:32 **** Auto Build of configuration Debug for project matrix_mult_processor ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_processor_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:5:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0;
+      ^
+Finished building: ../src/main.c
+ 
+Building target: matrix_mult_processor.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_processor_bsp/ps7_cortexa9_0/lib -o "matrix_mult_processor.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: matrix_mult_processor.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size matrix_mult_processor.elf  |tee "matrix_mult_processor.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19028	   1144	  22568	  42740	   a6f4	matrix_mult_processor.elf
+Finished building: matrix_mult_processor.elf.size
+ 
+23:07:01 **** Auto Build of configuration Debug for project matrix_mult_processor ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_processor_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:11:8: warning: unused variable 'in_mat_b' [-Wunused-variable]
+  mat_b in_mat_b[IN_B_ROWS][IN_B_COLS] = {
+        ^~~~~~~~
+../src/main.c:4:8: warning: unused variable 'in_mat_a' [-Wunused-variable]
+  mat_a in_mat_a[IN_A_ROWS][IN_A_COLS] = {
+        ^~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: matrix_mult_processor.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_processor_bsp/ps7_cortexa9_0/lib -o "matrix_mult_processor.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: matrix_mult_processor.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size matrix_mult_processor.elf  |tee "matrix_mult_processor.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19144	   1144	  22568	  42856	   a768	matrix_mult_processor.elf
+Finished building: matrix_mult_processor.elf.size
+ 
+23:07:02 **** Auto Build of configuration Debug for project matrix_mult_processor ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+23:07:17 **** Auto Build of configuration Debug for project matrix_mult_processor ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_processor_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:19:11: warning: unused variable 'product' [-Wunused-variable]
+  mat_prod product[IN_A_ROWS][IN_B_COLS];
+           ^~~~~~~
+../src/main.c:11:8: warning: unused variable 'in_mat_b' [-Wunused-variable]
+  mat_b in_mat_b[IN_B_ROWS][IN_B_COLS] = {
+        ^~~~~~~~
+../src/main.c:4:8: warning: unused variable 'in_mat_a' [-Wunused-variable]
+  mat_a in_mat_a[IN_A_ROWS][IN_A_COLS] = {
+        ^~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: matrix_mult_processor.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_processor_bsp/ps7_cortexa9_0/lib -o "matrix_mult_processor.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: matrix_mult_processor.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size matrix_mult_processor.elf  |tee "matrix_mult_processor.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19144	   1144	  22568	  42856	   a768	matrix_mult_processor.elf
+Finished building: matrix_mult_processor.elf.size
+ 
+23:09:02 **** Auto Build of configuration Debug for project matrix_mult_processor ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_processor_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: matrix_mult_processor.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_processor_bsp/ps7_cortexa9_0/lib -o "matrix_mult_processor.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+/home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/mult_in_processor/mult_in_processor.sdk/matrix_mult_processor/Debug/../src/main.c:21: undefined reference to `matrix_mult'
+makefile:39: recipe for target 'matrix_mult_processor.elf' failed
+collect2: error: ld returned 1 exit status
+make: *** [matrix_mult_processor.elf] Error 1
+23:10:55 **** Clean-only build of configuration Debug for project matrix_mult_processor ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  matrix_mult_processor.elf.size  matrix_mult_processor.elf
+ 
+23:10:56 **** Auto Build of configuration Debug for project matrix_mult_processor ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_processor_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:1:10: fatal error: matrix_mult.h: No such file or directory
+ #include "matrix_mult.h"
+          ^~~~~~~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+compilation terminated.
+make: *** [src/main.o] Error 1
+23:10:59 **** Clean-only build of configuration Debug for project matrix_mult_processor ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  matrix_mult_processor.elf.size  matrix_mult_processor.elf
+ 
+23:11:00 **** Auto Build of configuration Debug for project matrix_mult_processor ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_processor_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:1:10: fatal error: matrix_mult.h: No such file or directory
+ #include "matrix_mult.h"
+          ^~~~~~~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+compilation terminated.
+make: *** [src/main.o] Error 1
+23:11:41 **** Auto Build of configuration Debug for project matrix_mult_processor ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_processor_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:4:2: error: unknown type name 'mat_a'
+  mat_a in_mat_a[IN_A_ROWS][IN_A_COLS] = {
+  ^~~~~
+../src/main.c:4:17: error: 'IN_A_ROWS' undeclared (first use in this function)
+  mat_a in_mat_a[IN_A_ROWS][IN_A_COLS] = {
+                 ^~~~~~~~~
+../src/main.c:4:17: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:4:28: error: 'IN_A_COLS' undeclared (first use in this function); did you mean 'IN_A_ROWS'?
+  mat_a in_mat_a[IN_A_ROWS][IN_A_COLS] = {
+                            ^~~~~~~~~
+                            IN_A_ROWS
+../src/main.c:11:2: error: unknown type name 'mat_b'
+  mat_b in_mat_b[IN_B_ROWS][IN_B_COLS] = {
+  ^~~~~
+../src/main.c:11:17: error: 'IN_B_ROWS' undeclared (first use in this function); did you mean 'IN_A_ROWS'?
+  mat_b in_mat_b[IN_B_ROWS][IN_B_COLS] = {
+                 ^~~~~~~~~
+                 IN_A_ROWS
+../src/main.c:11:28: error: 'IN_B_COLS' undeclared (first use in this function); did you mean 'IN_A_COLS'?
+  mat_b in_mat_b[IN_B_ROWS][IN_B_COLS] = {
+                            ^~~~~~~~~
+                            IN_A_COLS
+../src/main.c:19:2: error: unknown type name 'mat_prod'
+  mat_prod product[IN_A_ROWS][IN_B_COLS];
+  ^~~~~~~~
+../src/main.c:21:2: warning: implicit declaration of function 'matrix_mult' [-Wimplicit-function-declaration]
+  matrix_mult(in_mat_a, in_mat_b, product);
+  ^~~~~~~~~~~
+../src/main.c:19:11: warning: unused variable 'product' [-Wunused-variable]
+  mat_prod product[IN_A_ROWS][IN_B_COLS];
+           ^~~~~~~
+../src/main.c:11:8: warning: unused variable 'in_mat_b' [-Wunused-variable]
+  mat_b in_mat_b[IN_B_ROWS][IN_B_COLS] = {
+        ^~~~~~~~
+../src/main.c:4:8: warning: unused variable 'in_mat_a' [-Wunused-variable]
+  mat_a in_mat_a[IN_A_ROWS][IN_A_COLS] = {
+        ^~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+23:12:24 **** Auto Build of configuration Debug for project matrix_mult_processor ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_processor_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: matrix_mult_processor.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_processor_bsp/ps7_cortexa9_0/lib -o "matrix_mult_processor.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+/home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/mult_in_processor/mult_in_processor.sdk/matrix_mult_processor/Debug/../src/main.c:21: undefined reference to `matrix_mult'
+makefile:39: recipe for target 'matrix_mult_processor.elf' failed
+collect2: error: ld returned 1 exit status
+make: *** [matrix_mult_processor.elf] Error 1
+23:12:53 **** Auto Build of configuration Debug for project matrix_mult_processor ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_processor_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: matrix_mult_processor.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_processor_bsp/ps7_cortexa9_0/lib -o "matrix_mult_processor.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+/home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/mult_in_processor/mult_in_processor.sdk/matrix_mult_processor/Debug/../src/main.c:21: undefined reference to `matrix_mult'
+makefile:39: recipe for target 'matrix_mult_processor.elf' failed
+collect2: error: ld returned 1 exit status
+make: *** [matrix_mult_processor.elf] Error 1
+23:13:10 **** Auto Build of configuration Debug for project matrix_mult_processor ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/matrix_mult.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_processor_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
+Finished building: ../src/matrix_mult.c
+ 
+Building target: matrix_mult_processor.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_processor_bsp/ps7_cortexa9_0/lib -o "matrix_mult_processor.elf"  ./src/main.o ./src/matrix_mult.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+/home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/mult_in_processor/mult_in_processor.sdk/matrix_mult_processor/Debug/../src/main.c:21: undefined reference to `matrix_mult'
+makefile:39: recipe for target 'matrix_mult_processor.elf' failed
+collect2: error: ld returned 1 exit status
+make: *** [matrix_mult_processor.elf] Error 1
+23:13:32 **** Auto Build of configuration Debug for project matrix_mult_processor ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/matrix_mult.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_processor_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
+../src/matrix_mult.c: In function 'matrix_mult':
+../src/matrix_mult.c:14:10: warning: label 'Product' defined but not used [-Wunused-label]
+          Product: for(int k = 0; k < IN_B_ROWS; k++) {
+          ^~~~~~~
+../src/matrix_mult.c:11:7: warning: label 'Col' defined but not used [-Wunused-label]
+       Col: for(int j = 0; j < IN_B_COLS; j++) {
+       ^~~
+../src/matrix_mult.c:9:4: warning: label 'Row' defined but not used [-Wunused-label]
+    Row: for(int i = 0; i < IN_A_ROWS; i++) {
+    ^~~
+Finished building: ../src/matrix_mult.c
+ 
+Building target: matrix_mult_processor.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_processor_bsp/ps7_cortexa9_0/lib -o "matrix_mult_processor.elf"  ./src/main.o ./src/matrix_mult.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: matrix_mult_processor.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size matrix_mult_processor.elf  |tee "matrix_mult_processor.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19568	   1144	  22568	  43280	   a910	matrix_mult_processor.elf
+Finished building: matrix_mult_processor.elf.size
+ 
+23:14:11 **** Auto Build of configuration Debug for project matrix_mult_processor ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_processor_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:23:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0;
+      ^
+Finished building: ../src/main.c
+ 
+Building target: matrix_mult_processor.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_processor_bsp/ps7_cortexa9_0/lib -o "matrix_mult_processor.elf"  ./src/main.o ./src/matrix_mult.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: matrix_mult_processor.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size matrix_mult_processor.elf  |tee "matrix_mult_processor.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19576	   1144	  22568	  43288	   a918	matrix_mult_processor.elf
+Finished building: matrix_mult_processor.elf.size
+ 
