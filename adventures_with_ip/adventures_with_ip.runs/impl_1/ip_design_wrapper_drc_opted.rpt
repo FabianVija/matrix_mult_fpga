@@ -1,0 +1,161 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Oct  9 21:19:21 2018
+| Host         : fabian running 64-bit Ubuntu 16.04.5 LTS
+| Command      : report_drc -file ip_design_wrapper_drc_opted.rpt -pb ip_design_wrapper_drc_opted.pb -rpx ip_design_wrapper_drc_opted.rpx
+| Design       : ip_design_wrapper
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 25
++--------+----------+------------------+------------+
+| Rule   | Severity | Description      | Violations |
++--------+----------+------------------+------------+
+| DPIP-1 | Warning  | Input pipelining | 25         |
++--------+----------+------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-1#1 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U51/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U51/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U52/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U52/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U53/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U53/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U54/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U54/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#5 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U55/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U55/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#6 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U56/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U56/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#7 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U57/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U57/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#8 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U58/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U58/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#9 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U59/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U59/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#10 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U60/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U60/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#11 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U61/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U61/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#12 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U62/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U62/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#13 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U63/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U63/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#14 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U64/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U64/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#15 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U65/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U65/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#16 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U66/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U66/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#17 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U67/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U67/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#18 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U68/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U68/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#19 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U69/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U69/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#20 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U70/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U70/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#21 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U71/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U71/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#22 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U72/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U72/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#23 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U73/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U73/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#24 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U74/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U74/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#25 Warning
+Input pipelining  
+DSP ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U75/matrix_mult_mac_mcud_DSP48_1_U/p input ip_design_i/matrix_mult_0/U0/matrix_mult_mac_mcud_U75/matrix_mult_mac_mcud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+

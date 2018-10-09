@@ -1,0 +1,35 @@
+#include "xparameters.h"
+#include "xmatrix_mult_hw.h"
+#include "xmatrix_mult.h"
+#include <stdio.h>
+
+typedef char mat_a;
+typedef char mat_b;
+typedef short mat_prod;
+
+#define IN_A_ROWS 5
+#define IN_A_COLS 5
+#define IN_B_ROWS 5
+#define IN_B_COLS 5
+
+int main(void){
+
+	int a = 5;
+	XMatrix_mult multi = {0,0};
+	mat_a in_mat_a[IN_A_ROWS][IN_A_COLS] = {
+	      {0, 0, 0, 0, 1},
+		  {0, 0, 0, 1, 0},
+		  {0, 0, 1, 0, 0},
+	      {0, 1, 0, 0, 0},
+	      {1, 0, 0, 0, 0}
+	   };
+	mat_b in_mat_b[IN_B_ROWS][IN_B_COLS] = {
+	      {1, 1, 1, 1, 1},
+	      {0, 1, 1, 1, 1},
+	      {0, 0, 1, 1, 1},
+		  {0, 0, 0, 1, 1},
+		  {0, 0, 0, 0, 1}
+	   };
+	a = 0;
+
+}

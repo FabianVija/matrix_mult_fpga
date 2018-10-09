@@ -1,0 +1,10 @@
+#include "xparameters.h"
+#include "xmatrix_mult_hw.h"
+#include "xmatrix_mult.h"
+#include <stdio.h>
+
+int main(void){
+
+	XMatrix_mult_Config mult_config = {XPAR_XMATRIX_MULT_0_DEVICE_ID, XPAR_XMATRIX_MULT_0_S_AXI_AXILITES_BASEADDR};
+
+}

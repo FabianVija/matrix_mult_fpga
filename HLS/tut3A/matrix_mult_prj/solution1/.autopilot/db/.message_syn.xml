@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;matrix_mult.cpp&apos; ..."/>
+	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1378" tag="" content="In file included from /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/HLS/tut3A/matrix_mult_prj/solution1/.autopilot/db/matrix_mult.pragma.1.cpp:1:
+In file included from matrix_mult.cpp:1:
+matrix_mult.cpp:9:26: error: expected &apos;)&apos;
+_ssdm_op_SpecInterface(&amp;a;, &quot;axis&quot;, 1, 1, &quot;both&quot;, 0, 0, &quot;&quot;, &quot;&quot;, &quot;&quot;, 0, 0, 0, 0, &quot;&quot;, &quot;&quot;);
+                         ^
+matrix_mult.cpp:9:23: note: to match this &apos;(&apos;
+_ssdm_op_SpecInterface(&amp;a;, &quot;axis&quot;, 1, 1, &quot;both&quot;, 0, 0, &quot;&quot;, &quot;&quot;, &quot;&quot;, 0, 0, 0, 0, &quot;&quot;, &quot;&quot;);
+                      ^
+matrix_mult.cpp:9:27: error: expected expression
+_ssdm_op_SpecInterface(&amp;a;, &quot;axis&quot;, 1, 1, &quot;both&quot;, 0, 0, &quot;&quot;, &quot;&quot;, &quot;&quot;, 0, 0, 0, 0, &quot;&quot;, &quot;&quot;);
+                          ^
+2 errors generated.\n"/>
+</Messages>

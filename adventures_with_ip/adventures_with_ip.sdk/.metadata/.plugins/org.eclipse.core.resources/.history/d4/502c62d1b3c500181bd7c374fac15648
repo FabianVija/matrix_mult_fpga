@@ -1,0 +1,31 @@
+#include "xparameters.h"
+#include "xmatrix_mult_hw.h"
+#include "xmatrix_mult.h"
+#include <stdio.h>
+#include "matrix_mult.h"
+
+int main(void){
+
+	int a = 5;
+	int b = 5;
+	XMatrix_mult multi = {0,0};
+	mat_a in_mat_a[IN_A_ROWS][IN_A_COLS] = {
+	      {1, 2, 3, 4, 5},
+		  {5, 4, 3, 2, 1},
+		  {1, 2, 3, 4, 5},
+	      {5, 4, 3, 2, 1},
+	      {1, 2, 3, 4, 5}
+	   };
+	mat_b in_mat_b[IN_B_ROWS][IN_B_COLS] = {
+		  {5, 4, 3, 2, 1},
+		  {1, 2, 3, 4, 5},
+		  {5, 4, 3, 2, 1},
+		  {1, 2, 3, 4, 5},
+		  {5, 4, 3, 2, 1}
+	   };
+
+	b = XMatrix_mult_Initialize(*multi, XPAR_XMATRIX_MULT_0_DEVICE_ID);
+
+	a = 0;
+
+}

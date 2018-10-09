@@ -1,0 +1,23 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "matrix_mult",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "ap_ctrl_none",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "return",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        }]
+    }]}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'store' operation (matrix_mult.cpp:16) of variable 'tmp_8_3_4_4', matrix_mult.cpp:16 on array 'prod' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'prod'." projectName="matrix_mult_prj" solutionName="solution5" date="2018-10-09T11:52:23.949+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('b_load_1', matrix_mult.cpp:16) on array 'b' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'b'." projectName="matrix_mult_prj" solutionName="solution5" date="2018-10-09T11:52:23.185+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/HLS/tut3A/matrix_mult_prj/solution1/.autopilot/db/matrix_mult.pragma.1.cpp:1:&#xA;In file included from matrix_mult.cpp:1:&#xA;matrix_mult.cpp:9:26: error: expected ')'&#xA;_ssdm_op_SpecInterface(&amp;a;, &quot;axis&quot;, 1, 1, &quot;both&quot;, 0, 0, &quot;&quot;, &quot;&quot;, &quot;&quot;, 0, 0, 0, 0, &quot;&quot;, &quot;&quot;);&#xA;                         ^&#xA;matrix_mult.cpp:9:23: note: to match this '('&#xA;_ssdm_op_SpecInterface(&amp;a;, &quot;axis&quot;, 1, 1, &quot;both&quot;, 0, 0, &quot;&quot;, &quot;&quot;, &quot;&quot;, 0, 0, 0, 0, &quot;&quot;, &quot;&quot;);&#xA;                      ^&#xA;matrix_mult.cpp:9:27: error: expected expression&#xA;_ssdm_op_SpecInterface(&amp;a;, &quot;axis&quot;, 1, 1, &quot;both&quot;, 0, 0, &quot;&quot;, &quot;&quot;, &quot;&quot;, 0, 0, 0, 0, &quot;&quot;, &quot;&quot;);&#xA;                          ^&#xA;2 errors generated.\n&#xA;Compilation of the preprocessed source 'matrix_mult' failed&#xA;    while executing&#xA;&quot;source /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/HLS/tut3A/matrix_mult_prj/solution1/csynth.tcl&quot;&#xA;    invoked from within&#xA;&quot;hls::main /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/HLS/tut3A/matrix_mult_prj/solution1/csynth.tcl&quot;&#xA;    (&quot;uplevel&quot; body line 1)&#xA;    invoked from within&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xA;    invoked from within&#xA;&quot;hls_proc $argv&quot;&#xA;" projectName="matrix_mult_prj" solutionName="solution1" date="2018-10-05T23:05:27.297+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('b_load_2', matrix_mult.cpp:16) on array 'b' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'b'." projectName="matrix_mult_prj" solutionName="solution3" date="2018-09-18T11:26:20.994+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_load', matrix_mult.cpp:16) on array 'a' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'a'." projectName="matrix_mult_prj" solutionName="solution3" date="2018-09-18T11:26:20.987+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xA;&#x9;'load' operation ('prod_load', matrix_mult.cpp:16) on array 'prod' (2.32 ns)&#xA;&#x9;'add' operation ('tmp_8', matrix_mult.cpp:16) (3.02 ns)&#xA;&#x9;'store' operation (matrix_mult.cpp:16) of variable 'tmp_8', matrix_mult.cpp:16 on array 'prod' (2.32 ns)" projectName="matrix_mult_prj" solutionName="solution2" date="2018-09-18T11:07:26.580+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (7.664ns) exceeds the target (target clock period: 5ns, clock uncertainty: 0.625ns, effective delay budget: 4.375ns)." projectName="matrix_mult_prj" solutionName="solution2" date="2018-09-18T11:07:26.575+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-70] Cannot meet target clock period from 'add' operation ('tmp_8') to 'store' operation of variable 'tmp_8' on array 'prod' (combination delay: 5.946 ns) to honor II or Latency constraint in region 'Product'." projectName="matrix_mult_prj" solutionName="solution2" date="2018-09-18T11:07:26.571+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xA;   between 'store' operation (matrix_mult.cpp:16) of variable 'tmp_8', matrix_mult.cpp:16 on array 'prod' and 'load' operation ('prod_load', matrix_mult.cpp:16) on array 'prod'." projectName="matrix_mult_prj" solutionName="solution2" date="2018-09-18T11:07:26.566+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Col' (matrix_mult.cpp:12:40) in function 'matrix_mult' : &#xA;&#xA;&#xA;the outer loop is not a perfect loop." projectName="matrix_mult_prj" solutionName="solution2" date="2018-09-18T11:07:26.500+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

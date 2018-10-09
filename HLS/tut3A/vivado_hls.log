@@ -1,0 +1,20 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'fabian' on host 'fabian' (Linux_x86_64 version 4.15.0-36-generic) on Tue Oct 09 11:52:36 CEST 2018
+INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/HLS/tut3A'
+INFO: [HLS 200-10] Opening project '/home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/HLS/tut3A/matrix_mult_prj'.
+INFO: [HLS 200-10] Opening solution '/home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/HLS/tut3A/matrix_mult_prj/solution5'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  9 11:52:44 2018...

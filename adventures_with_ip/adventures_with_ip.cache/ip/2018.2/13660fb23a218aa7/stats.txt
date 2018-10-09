@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Tue Oct 09 10:07:17 UTC 2018
+VLNV: xilinx.com:hls:matrix_mult:1.0
+SynthRuntime: 72

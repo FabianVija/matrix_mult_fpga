@@ -1,0 +1,49 @@
+#include "xparameters.h"
+#include "xmatrix_mult_hw.h"
+#include "xmatrix_mult.h"
+#include <stdio.h>
+#include "matrix_mult.h"
+
+int main(void){
+
+	int a = 5;
+	int b = 5;
+	XMatrix_mult multi = {0,XST_DEVICE_NOT_FOUND};
+	mat_a in_mat_a[IN_A_ROWS][IN_A_COLS] = {
+	      {7, 8, 9, 10, 11},
+		  {12, 13, 14, 15, 16},
+		  {17, 18, 19, 20, 21},
+	      {22, 23, 24, 25, 26},
+	      {27, 28, 29, 30, 31}
+	   };
+	mat_b in_mat_b[IN_B_ROWS][IN_B_COLS] = {
+		  {5, 4, 3, 2, 1},
+		  {1, 2, 3, 4, 5},
+		  {5, 4, 3, 2, 1},
+		  {1, 2, 3, 4, 5},
+		  {5, 4, 3, 2, 1}
+	   };
+
+	mat_a test[IN_A_ROWS][IN_A_COLS] = {
+		  {0, 0, 0, 0, 0},
+		  {0, 0, 0, 0, 0},
+		  {0, 0, 0, 0, 0},
+		  {0, 0, 0, 0, 0},
+		  {0, 0, 0, 0, 0}
+	};
+
+
+	b = XMatrix_mult_Initialize(&multi, XPAR_XMATRIX_MULT_0_DEVICE_ID);
+
+    b = XMatrix_mult_Write_a_Bytes(&multi, 0, &in_mat_a[0][0], IN_A_ROWS*IN_A_COLS);
+
+    XMatrix_mult_Read_a_Bytes(&multi, 0, &test[0][0], 25);
+
+    char aa[40];
+
+    XMatrix_mult_Read_a_Bytes(&multi, 0, &aa[0], 40);
+
+
+	a = 0;
+
+}

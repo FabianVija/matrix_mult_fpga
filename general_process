@@ -1,0 +1,20 @@
+1. vivado hls
+   1.1 Make the code
+   1.1 run C synthesis
+   1.2 export RTL
+
+2. copy the zip file of the ip to the ip_repo folder
+
+3. vivado 
+   3.1 import ip to vivado
+   3.2 modify blocks diagram
+   3.3 validate design (F6)
+   3.4 create HDL wrapper
+   3.5 generate bitsream
+   3.6 EXPORT HARDWARE 
+   3.7 go to sdk
+
+4. vivado sdk 
+   4.1 do the code with the ip functions found at:
+	matrix_mult_bsp/libsrc/matrix_mult_v1_0/src/...
+	

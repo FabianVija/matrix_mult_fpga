@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="matrix_mult.cpp" path="/home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/HLS/tut3A/matrix_mult.cpp"/>
+    <originFiles name="matrix_mult.h" path="/home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/HLS/tut3A/matrix_mult.h"/>
+  </source>
+  <testbench>
+    <originFiles name="matrix_mult_test.cpp" path="/home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/HLS/tut3A/matrix_mult_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
