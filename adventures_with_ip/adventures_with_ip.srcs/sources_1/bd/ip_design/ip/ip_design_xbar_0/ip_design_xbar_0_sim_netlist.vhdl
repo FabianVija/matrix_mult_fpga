@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
--- Date        : Tue Oct  9 12:07:14 2018
+-- Date        : Tue Oct  9 11:57:44 2018
 -- Host        : fabian running 64-bit Ubuntu 16.04.5 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_xbar_0/ip_design_xbar_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top ip_design_xbar_0 -prefix
+--               ip_design_xbar_0_ ip_design_xbar_0_sim_netlist.vhdl
 -- Design      : ip_design_xbar_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -63,8 +63,6 @@ entity ip_design_xbar_0_axi_crossbar_v2_1_18_addr_arbiter_sasd is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ip_design_xbar_0_axi_crossbar_v2_1_18_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_18_addr_arbiter_sasd";
 end ip_design_xbar_0_axi_crossbar_v2_1_18_addr_arbiter_sasd;
 
 architecture STRUCTURE of ip_design_xbar_0_axi_crossbar_v2_1_18_addr_arbiter_sasd is
@@ -1003,7 +1001,7 @@ begin
         port map (
       I0 => aresetn_d,
       I1 => \m_atarget_hot[2]_i_4_n_0\,
-      I2 => \^m_axi_arprot[2]\(25),
+      I2 => \^m_axi_arprot[2]\(24),
       I3 => \^m_axi_arprot[2]\(22),
       I4 => \m_atarget_hot[2]_i_3_n_0\,
       I5 => \m_atarget_hot[2]_i_2_n_0\,
@@ -1015,9 +1013,9 @@ begin
     )
         port map (
       I0 => \m_atarget_hot[2]_i_4_n_0\,
-      I1 => \^m_axi_arprot[2]\(25),
+      I1 => \^m_axi_arprot[2]\(24),
       I2 => \^m_axi_arprot[2]\(22),
-      I3 => \^m_axi_arprot[2]\(24),
+      I3 => \^m_axi_arprot[2]\(25),
       I4 => \^m_axi_arprot[2]\(23),
       I5 => \m_atarget_hot[2]_i_2_n_0\,
       O => any_error
@@ -1028,7 +1026,7 @@ begin
     )
         port map (
       I0 => \m_atarget_hot[2]_i_4_n_0\,
-      I1 => \^m_axi_arprot[2]\(25),
+      I1 => \^m_axi_arprot[2]\(24),
       I2 => \^m_axi_arprot[2]\(22),
       I3 => \m_atarget_hot[2]_i_3_n_0\,
       I4 => \m_atarget_hot[2]_i_2_n_0\,
@@ -1042,7 +1040,7 @@ begin
         port map (
       I0 => \^aa_grant_any\,
       I1 => \m_atarget_hot[2]_i_4_n_0\,
-      I2 => \^m_axi_arprot[2]\(25),
+      I2 => \^m_axi_arprot[2]\(24),
       I3 => \^m_axi_arprot[2]\(22),
       I4 => \m_atarget_hot[2]_i_3_n_0\,
       I5 => \m_atarget_hot[2]_i_2_n_0\,
@@ -1056,7 +1054,7 @@ begin
       I0 => \m_atarget_hot[2]_i_2_n_0\,
       I1 => \m_atarget_hot[2]_i_3_n_0\,
       I2 => \^m_axi_arprot[2]\(22),
-      I3 => \^m_axi_arprot[2]\(25),
+      I3 => \^m_axi_arprot[2]\(24),
       I4 => \m_atarget_hot[2]_i_4_n_0\,
       I5 => \^aa_grant_any\,
       O => D(2)
@@ -1078,7 +1076,7 @@ begin
       INIT => X"7"
     )
         port map (
-      I0 => \^m_axi_arprot[2]\(24),
+      I0 => \^m_axi_arprot[2]\(25),
       I1 => \^m_axi_arprot[2]\(23),
       O => \m_atarget_hot[2]_i_3_n_0\
     );
@@ -1374,8 +1372,6 @@ entity ip_design_xbar_0_axi_crossbar_v2_1_18_decerr_slave is
     aa_rready : in STD_LOGIC;
     \gen_no_arbiter.grant_rnw_reg_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ip_design_xbar_0_axi_crossbar_v2_1_18_decerr_slave : entity is "axi_crossbar_v2_1_18_decerr_slave";
 end ip_design_xbar_0_axi_crossbar_v2_1_18_decerr_slave;
 
 architecture STRUCTURE of ip_design_xbar_0_axi_crossbar_v2_1_18_decerr_slave is
@@ -1562,8 +1558,6 @@ entity ip_design_xbar_0_axi_crossbar_v2_1_18_splitter is
     \m_ready_d_reg[0]_0\ : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ip_design_xbar_0_axi_crossbar_v2_1_18_splitter : entity is "axi_crossbar_v2_1_18_splitter";
 end ip_design_xbar_0_axi_crossbar_v2_1_18_splitter;
 
 architecture STRUCTURE of ip_design_xbar_0_axi_crossbar_v2_1_18_splitter is
@@ -1756,8 +1750,6 @@ entity ip_design_xbar_0_axi_register_slice_v2_1_17_axic_register_slice is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ip_design_xbar_0_axi_register_slice_v2_1_17_axic_register_slice : entity is "axi_register_slice_v2_1_17_axic_register_slice";
 end ip_design_xbar_0_axi_register_slice_v2_1_17_axic_register_slice;
 
 architecture STRUCTURE of ip_design_xbar_0_axi_register_slice_v2_1_17_axic_register_slice is
@@ -2973,8 +2965,6 @@ entity ip_design_xbar_0_axi_crossbar_v2_1_18_crossbar_sasd is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ip_design_xbar_0_axi_crossbar_v2_1_18_crossbar_sasd : entity is "axi_crossbar_v2_1_18_crossbar_sasd";
 end ip_design_xbar_0_axi_crossbar_v2_1_18_crossbar_sasd;
 
 architecture STRUCTURE of ip_design_xbar_0_axi_crossbar_v2_1_18_crossbar_sasd is
@@ -3350,7 +3340,7 @@ entity ip_design_xbar_0_axi_crossbar_v2_1_18_axi_crossbar is
   attribute C_M_AXI_ADDR_WIDTH : string;
   attribute C_M_AXI_ADDR_WIDTH of ip_design_xbar_0_axi_crossbar_v2_1_18_axi_crossbar : entity is "64'b0000000000000000000000000001000000000000000000000000000000010000";
   attribute C_M_AXI_BASE_ADDR : string;
-  attribute C_M_AXI_BASE_ADDR of ip_design_xbar_0_axi_crossbar_v2_1_18_axi_crossbar : entity is "128'b00000000000000000000000000000000010000011000000000000000000000000000000000000000000000000000000001000011110000000000000000000000";
+  attribute C_M_AXI_BASE_ADDR of ip_design_xbar_0_axi_crossbar_v2_1_18_axi_crossbar : entity is "128'b00000000000000000000000000000000010000101000000000000000000000000000000000000000000000000000000001000011110000000000000000000000";
   attribute C_M_AXI_READ_CONNECTIVITY : string;
   attribute C_M_AXI_READ_CONNECTIVITY of ip_design_xbar_0_axi_crossbar_v2_1_18_axi_crossbar : entity is "64'b1111111111111111111111111111111111111111111111111111111111111111";
   attribute C_M_AXI_READ_ISSUING : string;
@@ -3383,8 +3373,6 @@ entity ip_design_xbar_0_axi_crossbar_v2_1_18_axi_crossbar is
   attribute C_S_AXI_WRITE_ACCEPTANCE of ip_design_xbar_0_axi_crossbar_v2_1_18_axi_crossbar : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of ip_design_xbar_0_axi_crossbar_v2_1_18_axi_crossbar : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ip_design_xbar_0_axi_crossbar_v2_1_18_axi_crossbar : entity is "axi_crossbar_v2_1_18_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of ip_design_xbar_0_axi_crossbar_v2_1_18_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;
@@ -3728,7 +3716,7 @@ architecture STRUCTURE of ip_design_xbar_0 is
   attribute C_M_AXI_ADDR_WIDTH : string;
   attribute C_M_AXI_ADDR_WIDTH of inst : label is "64'b0000000000000000000000000001000000000000000000000000000000010000";
   attribute C_M_AXI_BASE_ADDR : string;
-  attribute C_M_AXI_BASE_ADDR of inst : label is "128'b00000000000000000000000000000000010000011000000000000000000000000000000000000000000000000000000001000011110000000000000000000000";
+  attribute C_M_AXI_BASE_ADDR of inst : label is "128'b00000000000000000000000000000000010000101000000000000000000000000000000000000000000000000000000001000011110000000000000000000000";
   attribute C_M_AXI_READ_CONNECTIVITY : string;
   attribute C_M_AXI_READ_CONNECTIVITY of inst : label is "64'b1111111111111111111111111111111111111111111111111111111111111111";
   attribute C_M_AXI_READ_ISSUING : string;

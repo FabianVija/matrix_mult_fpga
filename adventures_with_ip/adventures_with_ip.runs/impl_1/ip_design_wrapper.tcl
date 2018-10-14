@@ -69,16 +69,16 @@ set rc [catch {
   set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.cache/wt [current_project]
-  set_property parent.project_path /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.xpr [current_project]
-  set_property ip_repo_paths /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/ip_repo [current_project]
-  set_property ip_output_repo /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.xpr [current_project]
+  set_property ip_repo_paths C:/Users/Felipe/Desktop/matrix_mult_fpga/ip_repo [current_project]
+  set_property ip_output_repo C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.runs/synth_1/ip_design_wrapper.dcp
+  add_files -quiet C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.runs/synth_1/ip_design_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip_design.bd
+  add_files C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip_design.bd
   set_param project.isImplRun false
   set_param project.isImplRun true
   link_design -top ip_design_wrapper -part xc7z020clg484-1

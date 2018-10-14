@@ -3820,3 +3820,625 @@ arm-none-eabi-size matrix_mult.elf  |tee "matrix_mult.elf.size"
   77768	   2588	  23344	 103700	  19514	matrix_mult.elf
 Finished building: matrix_mult.elf.size
  
+21:25:50 **** Auto Build of project matrix_mult_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/intc_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/intc_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/matrix_mult_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/matrix_mult_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/intc_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/intc_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in ps7_cortexa9_0/libsrc/matrix_mult_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/matrix_mult_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling matrix_mult"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+21:26:18 **** Auto Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/matrix_mult.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
+../src/matrix_mult.c: In function 'main':
+../src/matrix_mult.c:76:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0; // just a breakpoint for the debugger
+      ^
+../src/matrix_mult.c:26:11: warning: variable 'product' set but not used [-Wunused-but-set-variable]
+  mat_prod product[IN_A_ROWS][IN_B_COLS]; // to store the product
+           ^~~~~~~
+../src/matrix_mult.c:9:6: warning: unused variable 'ready' [-Wunused-variable]
+  int ready = 0;
+      ^~~~~
+'Finished building: ../src/matrix_mult.c'
+' '
+'Building target: matrix_mult.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_bsp/ps7_cortexa9_0/lib -o "matrix_mult.elf"  ./src/matrix_mult.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: matrix_mult.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size matrix_mult.elf  |tee "matrix_mult.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77768	   2588	  23344	 103700	  19514	matrix_mult.elf
+'Finished building: matrix_mult.elf.size'
+' '
+21:28:12 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:28:31 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:30:20 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:38:25 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+21:39:19 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:11:16 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:11:46 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:12:40 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/matrix_mult.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
+../src/matrix_mult.c: In function 'main':
+../src/matrix_mult.c:78:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0; // just a breakpoint for the debugger
+      ^
+../src/matrix_mult.c:28:11: warning: variable 'product' set but not used [-Wunused-but-set-variable]
+  mat_prod product[IN_A_ROWS][IN_B_COLS]; // to store the product
+           ^~~~~~~
+../src/matrix_mult.c:11:6: warning: unused variable 'ready' [-Wunused-variable]
+  int ready = 0;
+      ^~~~~
+'Finished building: ../src/matrix_mult.c'
+' '
+'Building target: matrix_mult.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_bsp/ps7_cortexa9_0/lib -o "matrix_mult.elf"  ./src/matrix_mult.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: matrix_mult.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size matrix_mult.elf  |tee "matrix_mult.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77816	   2588	  23344	 103748	  19544	matrix_mult.elf
+'Finished building: matrix_mult.elf.size'
+' '
+22:57:27 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:57:48 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:58:20 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/matrix_mult.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
+../src/matrix_mult.c: In function 'main':
+../src/matrix_mult.c:78:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0; // just a breakpoint for the debugger
+      ^
+../src/matrix_mult.c:28:11: warning: variable 'product' set but not used [-Wunused-but-set-variable]
+  mat_prod product[IN_A_ROWS][IN_B_COLS]; // to store the product
+           ^~~~~~~
+../src/matrix_mult.c:11:6: warning: unused variable 'ready' [-Wunused-variable]
+  int ready = 0;
+      ^~~~~
+'Finished building: ../src/matrix_mult.c'
+' '
+'Building target: matrix_mult.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_bsp/ps7_cortexa9_0/lib -o "matrix_mult.elf"  ./src/matrix_mult.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: matrix_mult.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size matrix_mult.elf  |tee "matrix_mult.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77880	   2588	  23344	 103812	  19584	matrix_mult.elf
+'Finished building: matrix_mult.elf.size'
+' '
+23:00:07 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+23:35:01 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+23:35:17 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+23:35:35 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/matrix_mult.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
+../src/matrix_mult.c: In function 'main':
+../src/matrix_mult.c:78:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0; // just a breakpoint for the debugger
+      ^
+../src/matrix_mult.c:28:11: warning: variable 'product' set but not used [-Wunused-but-set-variable]
+  mat_prod product[IN_A_ROWS][IN_B_COLS]; // to store the product
+           ^~~~~~~
+../src/matrix_mult.c:11:6: warning: unused variable 'ready' [-Wunused-variable]
+  int ready = 0;
+      ^~~~~
+'Finished building: ../src/matrix_mult.c'
+' '
+'Building target: matrix_mult.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_bsp/ps7_cortexa9_0/lib -o "matrix_mult.elf"  ./src/matrix_mult.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: matrix_mult.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size matrix_mult.elf  |tee "matrix_mult.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77816	   2588	  23344	 103748	  19544	matrix_mult.elf
+'Finished building: matrix_mult.elf.size'
+' '
+00:53:41 **** Auto Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/matrix_mult.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
+../src/matrix_mult.c: In function 'main':
+../src/matrix_mult.c:78:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0; // just a breakpoint for the debugger
+      ^
+../src/matrix_mult.c:28:11: warning: variable 'product' set but not used [-Wunused-but-set-variable]
+  mat_prod product[IN_A_ROWS][IN_B_COLS]; // to store the product
+           ^~~~~~~
+../src/matrix_mult.c:11:6: warning: unused variable 'ready' [-Wunused-variable]
+  int ready = 0;
+      ^~~~~
+'Finished building: ../src/matrix_mult.c'
+' '
+'Building target: matrix_mult.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_bsp/ps7_cortexa9_0/lib -o "matrix_mult.elf"  ./src/matrix_mult.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: matrix_mult.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size matrix_mult.elf  |tee "matrix_mult.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77996	   2588	  23344	 103928	  195f8	matrix_mult.elf
+'Finished building: matrix_mult.elf.size'
+' '
+01:14:30 **** Auto Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/matrix_mult.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
+../src/matrix_mult.c: In function 'main':
+../src/matrix_mult.c:113:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0; // just a breakpoint for the debugger
+      ^
+../src/matrix_mult.c:63:11: warning: variable 'product' set but not used [-Wunused-but-set-variable]
+  mat_prod product[IN_A_ROWS][IN_B_COLS]; // to store the product
+           ^~~~~~~
+../src/matrix_mult.c:46:6: warning: unused variable 'ready' [-Wunused-variable]
+  int ready = 0;
+      ^~~~~
+../src/matrix_mult.c: In function 'setupTimer':
+../src/matrix_mult.c:145:37: error: 'DeviceId' undeclared (first use in this function)
+  ConfigPtr = XScuTimer_LookupConfig(DeviceId);
+                                     ^~~~~~~~
+../src/matrix_mult.c:145:37: note: each undeclared identifier is reported only once for each function it appears in
+../src/matrix_mult.c:138:15: warning: unused variable 'CntValue2' [-Wunused-variable]
+  volatile u32 CntValue2 = 0;
+               ^~~~~~~~~
+../src/matrix_mult.c:137:15: warning: unused variable 'CntValue1' [-Wunused-variable]
+  volatile u32 CntValue1 = 0;
+               ^~~~~~~~~
+../src/matrix_mult.c: In function 'getTimerElapsedTicks':
+../src/matrix_mult.c:195:2: error: expected ';' before 'CntValue2'
+  CntValue2 = XScuTimer_GetCounterValue(TimerInstancePtr);
+  ^~~~~~~~~
+../src/matrix_mult.c: In function 'setupTimer':
+../src/matrix_mult.c:161:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/matrix_mult.c: In function 'resetAndStartTimer':
+../src/matrix_mult.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/matrix_mult.o] Error 1
+01:14:38 **** Auto Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/matrix_mult.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
+../src/matrix_mult.c: In function 'main':
+../src/matrix_mult.c:113:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0; // just a breakpoint for the debugger
+      ^
+../src/matrix_mult.c:63:11: warning: variable 'product' set but not used [-Wunused-but-set-variable]
+  mat_prod product[IN_A_ROWS][IN_B_COLS]; // to store the product
+           ^~~~~~~
+../src/matrix_mult.c:46:6: warning: unused variable 'ready' [-Wunused-variable]
+  int ready = 0;
+      ^~~~~
+../src/matrix_mult.c: In function 'setupTimer':
+../src/matrix_mult.c:145:37: error: 'DeviceId' undeclared (first use in this function)
+  ConfigPtr = XScuTimer_LookupConfig(DeviceId);
+                                     ^~~~~~~~
+../src/matrix_mult.c:145:37: note: each undeclared identifier is reported only once for each function it appears in
+../src/matrix_mult.c:138:15: warning: unused variable 'CntValue2' [-Wunused-variable]
+  volatile u32 CntValue2 = 0;
+               ^~~~~~~~~
+../src/matrix_mult.c:137:15: warning: unused variable 'CntValue1' [-Wunused-variable]
+  volatile u32 CntValue1 = 0;
+               ^~~~~~~~~
+../src/matrix_mult.c:161:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/matrix_mult.c: In function 'resetAndStartTimer':
+../src/matrix_mult.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/matrix_mult.o] Error 1
+01:15:03 **** Auto Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/matrix_mult.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
+../src/matrix_mult.c: In function 'main':
+../src/matrix_mult.c:113:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0; // just a breakpoint for the debugger
+      ^
+../src/matrix_mult.c:63:11: warning: variable 'product' set but not used [-Wunused-but-set-variable]
+  mat_prod product[IN_A_ROWS][IN_B_COLS]; // to store the product
+           ^~~~~~~
+../src/matrix_mult.c:46:6: warning: unused variable 'ready' [-Wunused-variable]
+  int ready = 0;
+      ^~~~~
+../src/matrix_mult.c: In function 'setupTimer':
+../src/matrix_mult.c:138:15: warning: unused variable 'CntValue2' [-Wunused-variable]
+  volatile u32 CntValue2 = 0;
+               ^~~~~~~~~
+../src/matrix_mult.c:137:15: warning: unused variable 'CntValue1' [-Wunused-variable]
+  volatile u32 CntValue1 = 0;
+               ^~~~~~~~~
+../src/matrix_mult.c:161:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/matrix_mult.c: In function 'resetAndStartTimer':
+../src/matrix_mult.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/matrix_mult.c'
+' '
+'Building target: matrix_mult.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_bsp/ps7_cortexa9_0/lib -o "matrix_mult.elf"  ./src/matrix_mult.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: matrix_mult.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size matrix_mult.elf  |tee "matrix_mult.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79224	   2604	  23360	 105188	  19ae4	matrix_mult.elf
+'Finished building: matrix_mult.elf.size'
+' '
+01:15:26 **** Auto Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/matrix_mult.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
+../src/matrix_mult.c: In function 'main':
+../src/matrix_mult.c:113:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0; // just a breakpoint for the debugger
+      ^
+../src/matrix_mult.c:63:11: warning: variable 'product' set but not used [-Wunused-but-set-variable]
+  mat_prod product[IN_A_ROWS][IN_B_COLS]; // to store the product
+           ^~~~~~~
+../src/matrix_mult.c:46:6: warning: unused variable 'ready' [-Wunused-variable]
+  int ready = 0;
+      ^~~~~
+../src/matrix_mult.c: In function 'setupTimer':
+../src/matrix_mult.c:158:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/matrix_mult.c: In function 'resetAndStartTimer':
+../src/matrix_mult.c:179:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/matrix_mult.c'
+' '
+'Building target: matrix_mult.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_bsp/ps7_cortexa9_0/lib -o "matrix_mult.elf"  ./src/matrix_mult.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: matrix_mult.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size matrix_mult.elf  |tee "matrix_mult.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79224	   2604	  23360	 105188	  19ae4	matrix_mult.elf
+'Finished building: matrix_mult.elf.size'
+' '
+01:17:26 **** Auto Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/matrix_mult.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
+../src/matrix_mult.c: In function 'main':
+../src/matrix_mult.c:113:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0; // just a breakpoint for the debugger
+      ^
+../src/matrix_mult.c:63:11: warning: variable 'product' set but not used [-Wunused-but-set-variable]
+  mat_prod product[IN_A_ROWS][IN_B_COLS]; // to store the product
+           ^~~~~~~
+../src/matrix_mult.c:46:6: warning: unused variable 'ready' [-Wunused-variable]
+  int ready = 0;
+      ^~~~~
+'Finished building: ../src/matrix_mult.c'
+' '
+'Building target: matrix_mult.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_bsp/ps7_cortexa9_0/lib -o "matrix_mult.elf"  ./src/matrix_mult.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: matrix_mult.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size matrix_mult.elf  |tee "matrix_mult.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79224	   2604	  23360	 105188	  19ae4	matrix_mult.elf
+'Finished building: matrix_mult.elf.size'
+' '
+01:19:00 **** Auto Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/matrix_mult.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
+../src/matrix_mult.c: In function 'main':
+../src/matrix_mult.c:121:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0; // just a breakpoint for the debugger
+      ^
+../src/matrix_mult.c:68:11: warning: variable 'product' set but not used [-Wunused-but-set-variable]
+  mat_prod product[IN_A_ROWS][IN_B_COLS]; // to store the product
+           ^~~~~~~
+../src/matrix_mult.c:50:6: warning: unused variable 'ready' [-Wunused-variable]
+  int ready = 0;
+      ^~~~~
+'Finished building: ../src/matrix_mult.c'
+' '
+'Building target: matrix_mult.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_bsp/ps7_cortexa9_0/lib -o "matrix_mult.elf"  ./src/matrix_mult.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: matrix_mult.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size matrix_mult.elf  |tee "matrix_mult.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79336	   2604	  23360	 105300	  19b54	matrix_mult.elf
+'Finished building: matrix_mult.elf.size'
+' '
+01:20:12 **** Auto Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/matrix_mult.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
+../src/matrix_mult.c: In function 'main':
+../src/matrix_mult.c:122:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0; // just a breakpoint for the debugger
+      ^
+../src/matrix_mult.c:68:11: warning: variable 'product' set but not used [-Wunused-but-set-variable]
+  mat_prod product[IN_A_ROWS][IN_B_COLS]; // to store the product
+           ^~~~~~~
+../src/matrix_mult.c:50:6: warning: unused variable 'ready' [-Wunused-variable]
+  int ready = 0;
+      ^~~~~
+'Finished building: ../src/matrix_mult.c'
+' '
+'Building target: matrix_mult.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_bsp/ps7_cortexa9_0/lib -o "matrix_mult.elf"  ./src/matrix_mult.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: matrix_mult.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size matrix_mult.elf  |tee "matrix_mult.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79416	   2604	  23360	 105380	  19ba4	matrix_mult.elf
+'Finished building: matrix_mult.elf.size'
+' '
+01:20:17 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+01:20:43 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/matrix_mult.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
+../src/matrix_mult.c: In function 'main':
+../src/matrix_mult.c:127:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0; // just a breakpoint for the debugger
+      ^
+../src/matrix_mult.c:68:11: warning: variable 'product' set but not used [-Wunused-but-set-variable]
+  mat_prod product[IN_A_ROWS][IN_B_COLS]; // to store the product
+           ^~~~~~~
+../src/matrix_mult.c:50:6: warning: unused variable 'ready' [-Wunused-variable]
+  int ready = 0;
+      ^~~~~
+'Finished building: ../src/matrix_mult.c'
+' '
+'Building target: matrix_mult.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_bsp/ps7_cortexa9_0/lib -o "matrix_mult.elf"  ./src/matrix_mult.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: matrix_mult.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size matrix_mult.elf  |tee "matrix_mult.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79416	   2604	  23360	 105380	  19ba4	matrix_mult.elf
+'Finished building: matrix_mult.elf.size'
+' '
+01:21:42 **** Incremental Build of configuration Debug for project matrix_mult ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/matrix_mult.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
+../src/matrix_mult.c: In function 'main':
+../src/matrix_mult.c:123:6: warning: unused variable 'a' [-Wunused-variable]
+  int a = 0; // just a breakpoint for the debugger
+      ^
+../src/matrix_mult.c:68:11: warning: variable 'product' set but not used [-Wunused-but-set-variable]
+  mat_prod product[IN_A_ROWS][IN_B_COLS]; // to store the product
+           ^~~~~~~
+../src/matrix_mult.c:50:6: warning: unused variable 'ready' [-Wunused-variable]
+  int ready = 0;
+      ^~~~~
+'Finished building: ../src/matrix_mult.c'
+' '
+'Building target: matrix_mult.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../matrix_mult_bsp/ps7_cortexa9_0/lib -o "matrix_mult.elf"  ./src/matrix_mult.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: matrix_mult.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size matrix_mult.elf  |tee "matrix_mult.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79416	   2604	  23360	 105380	  19ba4	matrix_mult.elf
+'Finished building: matrix_mult.elf.size'
+' '

@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-// Date        : Tue Oct  9 12:07:14 2018
+// Date        : Tue Oct  9 11:57:44 2018
 // Host        : fabian running 64-bit Ubuntu 16.04.5 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_xbar_0/ip_design_xbar_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top ip_design_xbar_0 -prefix
+//               ip_design_xbar_0_ ip_design_xbar_0_stub.v
 // Design      : ip_design_xbar_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

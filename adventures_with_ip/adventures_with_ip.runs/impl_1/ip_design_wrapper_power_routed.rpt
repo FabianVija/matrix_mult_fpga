@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Tue Oct  9 21:20:14 2018
-| Host             : fabian running 64-bit Ubuntu 16.04.5 LTS
+| Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date             : Mon Oct 15 00:05:57 2018
+| Host             : DESKTOP-7DNFL5V running 64-bit major release  (build 9200)
 | Command          : report_power -file ip_design_wrapper_power_routed.rpt -pb ip_design_wrapper_power_summary_routed.pb -rpx ip_design_wrapper_power_routed.rpx
 | Design           : ip_design_wrapper
 | Device           : xc7z020clg484-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.702        |
+| Total On-Chip Power (W)  | 1.704        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.560        |
+| Dynamic (W)              | 1.562        |
 | Device Static (W)        | 0.142        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 65.4         |
-| Junction Temperature (C) | 44.6         |
+| Max Ambient (C)          | 65.3         |
+| Junction Temperature (C) | 44.7         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,19 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.010 |        3 |       --- |             --- |
-| Slice Logic             |     0.002 |     8760 |       --- |             --- |
-|   LUT as Logic          |     0.001 |     4273 |     53200 |            8.03 |
-|   Register              |    <0.001 |     2261 |    106400 |            2.13 |
-|   CARRY4                |    <0.001 |      664 |     13300 |            4.99 |
+| Clocks                  |     0.011 |        3 |       --- |             --- |
+| Slice Logic             |     0.002 |     9227 |       --- |             --- |
+|   LUT as Logic          |     0.002 |     4500 |     53200 |            8.46 |
+|   CARRY4                |    <0.001 |      706 |     13300 |            5.31 |
+|   Register              |    <0.001 |     2399 |    106400 |            2.25 |
 |   LUT as Shift Register |    <0.001 |       62 |     17400 |            0.36 |
-|   Others                |     0.000 |      438 |       --- |             --- |
-| Signals                 |     0.002 |     8332 |       --- |             --- |
+|   Others                |     0.000 |      480 |       --- |             --- |
+| Signals                 |     0.003 |     8550 |       --- |             --- |
 | Block RAM               |     0.016 |        4 |       140 |            2.86 |
 | DSPs                    |    <0.001 |       75 |       220 |           34.09 |
 | PS7                     |     1.529 |        1 |       --- |             --- |
 | Static Power            |     0.142 |          |           |                 |
-| Total                   |     1.702 |          |           |                 |
+| Total                   |     1.704 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.044 |       0.029 |      0.015 |
+| Vccint    |       1.000 |     0.047 |       0.032 |      0.015 |
 | Vccaux    |       1.800 |     0.015 |       0.000 |      0.015 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -147,216 +147,231 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------------------------------------------+-----------+
-| Name                                             | Power (W) |
-+--------------------------------------------------+-----------+
-| ip_design_wrapper                                |     1.560 |
-|   ip_design_i                                    |     1.560 |
-|     axi_intc_0                                   |    <0.001 |
-|       U0                                         |    <0.001 |
-|         AXI_LITE_IPIF_I                          |    <0.001 |
-|           I_SLAVE_ATTACHMENT                     |    <0.001 |
-|             I_DECODER                            |    <0.001 |
-|         INTC_CORE_I                              |    <0.001 |
-|     matrix_mult_0                                |     0.023 |
-|       U0                                         |     0.023 |
-|         matrix_mult_AXILiteS_s_axi_U             |     0.017 |
-|           int_a                                  |     0.006 |
-|           int_b                                  |     0.006 |
-|           int_prod                               |     0.004 |
-|         matrix_mult_mac_mbkb_U1                  |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U10                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U11                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U12                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U13                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U14                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U15                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U16                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U17                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U18                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U19                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U2                  |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U20                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U21                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U22                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U23                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U24                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U25                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U26                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U27                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U28                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U29                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U3                  |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U30                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U31                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U32                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U33                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U34                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U35                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U36                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U37                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U38                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U39                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U4                  |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U40                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U41                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U42                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U43                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U44                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U45                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U46                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U47                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U48                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U49                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U5                  |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U50                 |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U6                  |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U7                  |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U8                  |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mbkb_U9                  |    <0.001 |
-|           matrix_mult_mac_mbkb_DSP48_0_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U51                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U52                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U53                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U54                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U55                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U56                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U57                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U58                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U59                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U60                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U61                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U62                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U63                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U64                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U65                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U66                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U67                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U68                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U69                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U70                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U71                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U72                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U73                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U74                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|         matrix_mult_mac_mcud_U75                 |    <0.001 |
-|           matrix_mult_mac_mcud_DSP48_1_U         |    <0.001 |
-|     processing_system7_0                         |     1.530 |
-|       inst                                       |     1.530 |
-|     ps7_0_axi_periph                             |     0.006 |
-|       s00_couplers                               |     0.005 |
-|         auto_pc                                  |     0.005 |
-|           inst                                   |     0.005 |
-|             gen_axilite.gen_b2s_conv.axilite_b2s |     0.005 |
-|               RD.ar_channel_0                    |    <0.001 |
-|                 ar_cmd_fsm_0                     |    <0.001 |
-|                 cmd_translator_0                 |    <0.001 |
-|                   incr_cmd_0                     |    <0.001 |
-|                   wrap_cmd_0                     |    <0.001 |
-|               RD.r_channel_0                     |     0.001 |
-|                 rd_data_fifo_0                   |    <0.001 |
-|                 transaction_fifo_0               |    <0.001 |
-|               SI_REG                             |     0.002 |
-|                 ar.ar_pipe                       |    <0.001 |
-|                 aw.aw_pipe                       |    <0.001 |
-|                 b.b_pipe                         |    <0.001 |
-|                 r.r_pipe                         |    <0.001 |
-|               WR.aw_channel_0                    |     0.001 |
-|                 aw_cmd_fsm_0                     |    <0.001 |
-|                 cmd_translator_0                 |    <0.001 |
-|                   incr_cmd_0                     |    <0.001 |
-|                   wrap_cmd_0                     |    <0.001 |
-|               WR.b_channel_0                     |    <0.001 |
-|                 bid_fifo_0                       |    <0.001 |
-|                 bresp_fifo_0                     |    <0.001 |
-|       xbar                                       |     0.001 |
-|         inst                                     |     0.001 |
-|           gen_sasd.crossbar_sasd_0               |     0.001 |
-|             addr_arbiter_inst                    |    <0.001 |
-|             gen_decerr.decerr_slave_inst         |    <0.001 |
-|             reg_slice_r                          |    <0.001 |
-|             splitter_ar                          |    <0.001 |
-|             splitter_aw                          |    <0.001 |
-|     rst_ps7_0_100M                               |    <0.001 |
-|       U0                                         |    <0.001 |
-|         EXT_LPF                                  |    <0.001 |
-|           ACTIVE_LOW_AUX.ACT_LO_AUX              |    <0.001 |
-|           ACTIVE_LOW_EXT.ACT_LO_EXT              |    <0.001 |
-|         SEQ                                      |    <0.001 |
-|           SEQ_COUNTER                            |    <0.001 |
-+--------------------------------------------------+-----------+
++-----------------------------------------------------------------------------+-----------+
+| Name                                                                        | Power (W) |
++-----------------------------------------------------------------------------+-----------+
+| ip_design_wrapper                                                           |     1.562 |
+|   ip_design_i                                                               |     1.562 |
+|     axi_timer_0                                                             |     0.003 |
+|       U0                                                                    |     0.003 |
+|         AXI4_LITE_I                                                         |    <0.001 |
+|           I_SLAVE_ATTACHMENT                                                |    <0.001 |
+|             I_DECODER                                                       |    <0.001 |
+|               MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I |    <0.001 |
+|               MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I |    <0.001 |
+|               MEM_DECODE_GEN[0].PER_CE_GEN[4].MULTIPLE_CES_THIS_CS_GEN.CE_I |    <0.001 |
+|               MEM_DECODE_GEN[0].PER_CE_GEN[5].MULTIPLE_CES_THIS_CS_GEN.CE_I |    <0.001 |
+|               MEM_DECODE_GEN[0].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I |    <0.001 |
+|               MEM_DECODE_GEN[0].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I |    <0.001 |
+|         TC_CORE_I                                                           |     0.003 |
+|           COUNTER_0_I                                                       |     0.001 |
+|             COUNTER_I                                                       |     0.001 |
+|           GEN_SECOND_TIMER.COUNTER_1_I                                      |     0.001 |
+|             COUNTER_I                                                       |    <0.001 |
+|           READ_MUX_I                                                        |    <0.001 |
+|           TIMER_CONTROL_I                                                   |    <0.001 |
+|             INPUT_DOUBLE_REGS                                               |    <0.001 |
+|             INPUT_DOUBLE_REGS2                                              |    <0.001 |
+|             INPUT_DOUBLE_REGS3                                              |    <0.001 |
+|     matrix_mult_0                                                           |     0.023 |
+|       U0                                                                    |     0.023 |
+|         matrix_mult_AXILiteS_s_axi_U                                        |     0.017 |
+|           int_a                                                             |     0.006 |
+|           int_b                                                             |     0.006 |
+|           int_prod                                                          |     0.004 |
+|         matrix_mult_mac_mbkb_U1                                             |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U10                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U11                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U12                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U13                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U14                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U15                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U16                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U17                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U18                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U19                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U2                                             |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U20                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U21                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U22                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U23                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U24                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U25                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U26                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U27                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U28                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U29                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U3                                             |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U30                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U31                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U32                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U33                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U34                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U35                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U36                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U37                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U38                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U39                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U4                                             |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U40                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U41                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U42                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U43                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U44                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U45                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U46                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U47                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U48                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U49                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U5                                             |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U50                                            |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U6                                             |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U7                                             |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U8                                             |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mbkb_U9                                             |    <0.001 |
+|           matrix_mult_mac_mbkb_DSP48_0_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U51                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U52                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U53                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U54                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U55                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U56                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U57                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U58                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U59                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U60                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U61                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U62                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U63                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U64                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U65                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U66                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U67                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U68                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U69                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U70                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U71                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U72                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U73                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U74                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|         matrix_mult_mac_mcud_U75                                            |    <0.001 |
+|           matrix_mult_mac_mcud_DSP48_1_U                                    |    <0.001 |
+|     processing_system7_0                                                    |     1.530 |
+|       inst                                                                  |     1.530 |
+|     ps7_0_axi_periph                                                        |     0.006 |
+|       s00_couplers                                                          |     0.005 |
+|         auto_pc                                                             |     0.005 |
+|           inst                                                              |     0.005 |
+|             gen_axilite.gen_b2s_conv.axilite_b2s                            |     0.005 |
+|               RD.ar_channel_0                                               |    <0.001 |
+|                 ar_cmd_fsm_0                                                |    <0.001 |
+|                 cmd_translator_0                                            |    <0.001 |
+|                   incr_cmd_0                                                |    <0.001 |
+|                   wrap_cmd_0                                                |    <0.001 |
+|               RD.r_channel_0                                                |     0.001 |
+|                 rd_data_fifo_0                                              |    <0.001 |
+|                 transaction_fifo_0                                          |    <0.001 |
+|               SI_REG                                                        |     0.002 |
+|                 ar.ar_pipe                                                  |    <0.001 |
+|                 aw.aw_pipe                                                  |    <0.001 |
+|                 b.b_pipe                                                    |    <0.001 |
+|                 r.r_pipe                                                    |    <0.001 |
+|               WR.aw_channel_0                                               |     0.001 |
+|                 aw_cmd_fsm_0                                                |    <0.001 |
+|                 cmd_translator_0                                            |    <0.001 |
+|                   incr_cmd_0                                                |    <0.001 |
+|                   wrap_cmd_0                                                |    <0.001 |
+|               WR.b_channel_0                                                |    <0.001 |
+|                 bid_fifo_0                                                  |    <0.001 |
+|                 bresp_fifo_0                                                |    <0.001 |
+|       xbar                                                                  |    <0.001 |
+|         inst                                                                |    <0.001 |
+|           gen_sasd.crossbar_sasd_0                                          |    <0.001 |
+|             addr_arbiter_inst                                               |    <0.001 |
+|             gen_decerr.decerr_slave_inst                                    |    <0.001 |
+|             reg_slice_r                                                     |    <0.001 |
+|             splitter_ar                                                     |    <0.001 |
+|             splitter_aw                                                     |    <0.001 |
+|     rst_ps7_0_100M                                                          |    <0.001 |
+|       U0                                                                    |    <0.001 |
+|         EXT_LPF                                                             |    <0.001 |
+|           ACTIVE_LOW_AUX.ACT_LO_AUX                                         |    <0.001 |
+|           ACTIVE_LOW_EXT.ACT_LO_EXT                                         |    <0.001 |
+|         SEQ                                                                 |    <0.001 |
+|           SEQ_COUNTER                                                       |    <0.001 |
++-----------------------------------------------------------------------------+-----------+
 
 

@@ -1,8 +1,8 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
---Date        : Tue Oct  9 21:17:23 2018
---Host        : fabian running 64-bit Ubuntu 16.04.5 LTS
+--Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+--Date        : Mon Oct 15 00:02:01 2018
+--Host        : DESKTOP-7DNFL5V running 64-bit major release  (build 9200)
 --Command     : generate_target ip_design.bd
 --Design      : ip_design
 --Purpose     : IP block netlist
@@ -1111,7 +1111,7 @@ entity ip_design is
     FIXED_IO_ps_srstb : inout STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of ip_design : entity is "ip_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=ip_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=10,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of ip_design : entity is "ip_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=ip_design,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=10,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of ip_design : entity is "ip_design.hwdef";
 end ip_design;
@@ -1227,11 +1227,18 @@ architecture STRUCTURE of ip_design is
     interrupt : out STD_LOGIC
   );
   end component ip_design_matrix_mult_0_1;
-  component ip_design_axi_intc_0_0 is
+  component ip_design_axi_timer_0_0 is
   port (
+    capturetrig0 : in STD_LOGIC;
+    capturetrig1 : in STD_LOGIC;
+    generateout0 : out STD_LOGIC;
+    generateout1 : out STD_LOGIC;
+    pwm0 : out STD_LOGIC;
+    interrupt : out STD_LOGIC;
+    freeze : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_axi_awvalid : in STD_LOGIC;
     s_axi_awready : out STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -1241,18 +1248,15 @@ architecture STRUCTURE of ip_design is
     s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_bvalid : out STD_LOGIC;
     s_axi_bready : in STD_LOGIC;
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_axi_arvalid : in STD_LOGIC;
     s_axi_arready : out STD_LOGIC;
     s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
-    s_axi_rready : in STD_LOGIC;
-    intr : in STD_LOGIC_VECTOR ( 0 to 0 );
-    irq : out STD_LOGIC
+    s_axi_rready : in STD_LOGIC
   );
-  end component ip_design_axi_intc_0_0;
-  signal matrix_mult_0_interrupt : STD_LOGIC;
+  end component ip_design_axi_timer_0_0;
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -1350,7 +1354,11 @@ architecture STRUCTURE of ip_design is
   signal ps7_0_axi_periph_M01_AXI_WVALID : STD_LOGIC;
   signal rst_ps7_0_100M_interconnect_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_ps7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_axi_intc_0_irq_UNCONNECTED : STD_LOGIC;
+  signal NLW_axi_timer_0_generateout0_UNCONNECTED : STD_LOGIC;
+  signal NLW_axi_timer_0_generateout1_UNCONNECTED : STD_LOGIC;
+  signal NLW_axi_timer_0_interrupt_UNCONNECTED : STD_LOGIC;
+  signal NLW_axi_timer_0_pwm0_UNCONNECTED : STD_LOGIC;
+  signal NLW_matrix_mult_0_interrupt_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_TTC0_WAVE0_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_TTC0_WAVE1_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_TTC0_WAVE2_OUT_UNCONNECTED : STD_LOGIC;
@@ -1385,16 +1393,21 @@ architecture STRUCTURE of ip_design is
   attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
 begin
-axi_intc_0: component ip_design_axi_intc_0_0
+axi_timer_0: component ip_design_axi_timer_0_0
      port map (
-      intr(0) => matrix_mult_0_interrupt,
-      irq => NLW_axi_intc_0_irq_UNCONNECTED,
+      capturetrig0 => '0',
+      capturetrig1 => '0',
+      freeze => '0',
+      generateout0 => NLW_axi_timer_0_generateout0_UNCONNECTED,
+      generateout1 => NLW_axi_timer_0_generateout1_UNCONNECTED,
+      interrupt => NLW_axi_timer_0_interrupt_UNCONNECTED,
+      pwm0 => NLW_axi_timer_0_pwm0_UNCONNECTED,
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
-      s_axi_araddr(8 downto 0) => ps7_0_axi_periph_M01_AXI_ARADDR(8 downto 0),
+      s_axi_araddr(4 downto 0) => ps7_0_axi_periph_M01_AXI_ARADDR(4 downto 0),
       s_axi_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),
       s_axi_arready => ps7_0_axi_periph_M01_AXI_ARREADY,
       s_axi_arvalid => ps7_0_axi_periph_M01_AXI_ARVALID,
-      s_axi_awaddr(8 downto 0) => ps7_0_axi_periph_M01_AXI_AWADDR(8 downto 0),
+      s_axi_awaddr(4 downto 0) => ps7_0_axi_periph_M01_AXI_AWADDR(4 downto 0),
       s_axi_awready => ps7_0_axi_periph_M01_AXI_AWREADY,
       s_axi_awvalid => ps7_0_axi_periph_M01_AXI_AWVALID,
       s_axi_bready => ps7_0_axi_periph_M01_AXI_BREADY,
@@ -1413,7 +1426,7 @@ matrix_mult_0: component ip_design_matrix_mult_0_1
      port map (
       ap_clk => processing_system7_0_FCLK_CLK0,
       ap_rst_n => rst_ps7_0_100M_peripheral_aresetn(0),
-      interrupt => matrix_mult_0_interrupt,
+      interrupt => NLW_matrix_mult_0_interrupt_UNCONNECTED,
       s_axi_AXILiteS_ARADDR(7 downto 0) => ps7_0_axi_periph_M00_AXI_ARADDR(7 downto 0),
       s_axi_AXILiteS_ARREADY => ps7_0_axi_periph_M00_AXI_ARREADY,
       s_axi_AXILiteS_ARVALID => ps7_0_axi_periph_M00_AXI_ARVALID,

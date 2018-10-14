@@ -23,28 +23,27 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.cache/wt [current_project]
-set_property parent.project_path /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.cache/wt [current_project]
+set_property parent.project_path C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
-set_property ip_repo_paths /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/ip_repo [current_project]
-set_property ip_output_repo /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.cache/ip [current_project]
+set_property ip_repo_paths c:/Users/Felipe/Desktop/matrix_mult_fpga/ip_repo [current_project]
+set_property ip_output_repo c:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_vhdl -library xil_defaultlib /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/hdl/ip_design_wrapper.vhd
-add_files /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip_design.bd
-set_property used_in_implementation false [get_files -all /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/ip_design_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_100M_0/ip_design_rst_ps7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_100M_0/ip_design_rst_ps7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_100M_0/ip_design_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_xbar_0/ip_design_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_matrix_mult_0_1/constraints/matrix_mult_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_axi_intc_0_0/ip_design_axi_intc_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_axi_intc_0_0/ip_design_axi_intc_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_axi_intc_0_0/ip_design_axi_intc_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_auto_pc_0/ip_design_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/fabian/Documents/ensta/deuxieme/sys_elec_embar/Zynq_Book/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip_design_ooc.xdc]
+read_vhdl -library xil_defaultlib C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/hdl/ip_design_wrapper.vhd
+add_files C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip_design.bd
+set_property used_in_implementation false [get_files -all c:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_processing_system7_0_0/ip_design_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_100M_0/ip_design_rst_ps7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_100M_0/ip_design_rst_ps7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_rst_ps7_0_100M_0/ip_design_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_xbar_0/ip_design_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_matrix_mult_0_1/constraints/matrix_mult_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_axi_timer_0_0/ip_design_axi_timer_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_axi_timer_0_0/ip_design_axi_timer_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip/ip_design_auto_pc_0/ip_design_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.srcs/sources_1/bd/ip_design/ip_design_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

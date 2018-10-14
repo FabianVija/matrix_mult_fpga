@@ -1,12 +1,54 @@
+/***************************** Include Files *********************************/
+
 #include "xparameters.h"
 #include "xmatrix_mult_hw.h"
 #include "xmatrix_mult.h"
 #include <stdio.h>
 #include "matrix_mult.h"
+#include "xscutimer.h"
 
-int main(void){
+
+/************************** Constant Definitions *****************************/
+
+/*
+ * The following constants map to the XPAR parameters created in the
+ * xparameters.h file. They are only defined here such that a user can easily
+ * change all the needed parameters in one place.
+ */
+#define TIMER_DEVICE_ID		XPAR_XSCUTIMER_0_DEVICE_ID
+#define TIMER_LOAD_VALUE	0xFFFF
+
+/**************************** Type Definitions *******************************/
+
+/***************** Macros (Inline Functions) Definitions *********************/
+
+/************************** Function Prototypes ******************************/
+
+int setupTimer();
+int resetAndStartTimer();
+int getTimerElapsedTicks();
+
+
+/************************** Variable Definitions *****************************/
+
+XScuTimer Timer;		/* Cortex A9 SCU Private Timer Instance */
+volatile u32 CntValue1 = 0;
+volatile u32 CntValue2 = 0;
+XScuTimer *TimerInstancePtr = &Timer;
+
+
+/*****************************************************************************/
+
+int main(void) {
+
+	printf("\r\n--------------- SETUP ---------------\r\n");
+
+	setupTimer();
+
+	printf("\r\n--------------- MATRIX MULT ---------------\r\n");
 
 	int ready = 0;
+	int elapsed_ticks = 0;
 	XMatrix_mult multi = {0,XST_DEVICE_NOT_FOUND};
 	mat_a in_mat_a[IN_A_ROWS][IN_A_COLS] = {
 	    		  {26, 27, 28, 29, 30},
@@ -43,15 +85,20 @@ int main(void){
 
 	// set start time
 
+	for (int i=0; i<100; i++) {
+		// start the multiplication algorithm
 
-	// start the multiplication algorithm
-	XMatrix_mult_Start(&multi);
+		XMatrix_mult_Start(&multi);
+		resetAndStartTimer();
 
-	// if is NOT done the function XMatrix_mult_IsDone return 1
-	while(XMatrix_mult_IsDone(&multi)){
+		// if is NOT done the function XMatrix_mult_IsDone return 1
+		while(XMatrix_mult_IsDone(&multi)){
+		}
+
+		// see difference of time
+		getTimerElapsedTicks(&elapsed_ticks);
+		printf("Elapsed: %d\r\n", elapsed_ticks);
 	}
-
-	// see difference of time
 
     // read the variables
     XMatrix_mult_Read_a_Bytes(&multi, 0, &aa[0], 40);
@@ -60,8 +107,8 @@ int main(void){
 
 
     // show the variables over uart (yes it works jaja you can try it)
-    // print_matrix(aa, 40);
-    // print_matrix(bb, 40);
+//    print_matrix(aa, 40);
+//    print_matrix(bb, 40);
 
     // store the product in the matrix
     int counter = 0;
@@ -77,8 +124,9 @@ int main(void){
 
 }
 
-void print_matrix(char matrix[], int size)
-{	// show over uart
+/*****************************************************************************/
+
+void print_matrix(char matrix[], int size) {	// show over uart
 	int i = 0;
 
 	for(i = 0; i<size; i++)
@@ -91,3 +139,77 @@ void print_matrix(char matrix[], int size)
 	}
 	printf("0000000000000000000000000");
 }
+
+/*****************************************************************************/
+
+int setupTimer() {
+	int Status;
+	XScuTimer_Config *ConfigPtr;
+
+	/*
+	 * Initialize the Scu Private Timer so that it is ready to use.
+	 */
+	ConfigPtr = XScuTimer_LookupConfig(TIMER_DEVICE_ID);
+
+	/*
+	 * This is where the virtual address would be used, this example
+	 * uses physical address.
+	 */
+	Status = XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr,
+				 ConfigPtr->BaseAddr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Load the timer counter register.
+	 */
+	XScuTimer_LoadTimer(TimerInstancePtr, TIMER_LOAD_VALUE);
+
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+
+int resetAndStartTimer() {
+	/*
+	 * Load the timer counter register.
+	 */
+	XScuTimer_LoadTimer(TimerInstancePtr, TIMER_LOAD_VALUE);
+
+	/*
+	 * Get a snapshot of the timer counter value before it's started
+	 * to compare against later.
+	 */
+	CntValue1 = XScuTimer_GetCounterValue(TimerInstancePtr);
+
+	/*
+	 * Start the Scu Private Timer device.
+	 */
+	XScuTimer_Start(TimerInstancePtr);
+
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+
+int getTimerElapsedTicks(int* elapsedTicks) {
+	/*
+	 * Stop the Scu Private Timer device.
+	 */
+	XScuTimer_Stop(TimerInstancePtr);
+
+	/*
+	 * Get a snapshot of the timer counter value
+	 */
+	CntValue2 = XScuTimer_GetCounterValue(TimerInstancePtr);
+
+	/*
+	 * Return the difference between the two readings, which should be the elapsed amount of time
+	 */
+	*elapsedTicks = CntValue1 - CntValue2; /* Decreasing timer, so the subtraction has to be inverted */
+
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/

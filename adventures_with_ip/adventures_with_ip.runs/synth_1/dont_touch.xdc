@@ -19,8 +19,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ip_design_xbar_
 # IP: bd/ip_design/ip/ip_design_matrix_mult_0_1/ip_design_matrix_mult_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ip_design_matrix_mult_0_1 || ORIG_REF_NAME==ip_design_matrix_mult_0_1} -quiet] -quiet
 
-# IP: bd/ip_design/ip/ip_design_axi_intc_0_0/ip_design_axi_intc_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ip_design_axi_intc_0_0 || ORIG_REF_NAME==ip_design_axi_intc_0_0} -quiet] -quiet
+# IP: bd/ip_design/ip/ip_design_axi_timer_0_0/ip_design_axi_timer_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ip_design_axi_timer_0_0 || ORIG_REF_NAME==ip_design_axi_timer_0_0} -quiet] -quiet
 
 # IP: bd/ip_design/ip/ip_design_auto_pc_0/ip_design_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ip_design_auto_pc_0 || ORIG_REF_NAME==ip_design_auto_pc_0} -quiet] -quiet

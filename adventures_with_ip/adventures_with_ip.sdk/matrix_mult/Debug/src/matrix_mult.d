@@ -14,7 +14,9 @@ src/matrix_mult.o src/matrix_mult.o: ../src/matrix_mult.c \
  ../../matrix_mult_bsp/ps7_cortexa9_0/include/xreg_cortexa9.h \
  ../../matrix_mult_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h \
  ../../matrix_mult_bsp/ps7_cortexa9_0/include/xmatrix_mult_hw.h \
- ../src/matrix_mult.h
+ ../src/matrix_mult.h \
+ ../../matrix_mult_bsp/ps7_cortexa9_0/include/xscutimer.h \
+ ../../matrix_mult_bsp/ps7_cortexa9_0/include/xscutimer_hw.h
 
 ../../matrix_mult_bsp/ps7_cortexa9_0/include/xparameters.h:
 
@@ -47,3 +49,7 @@ src/matrix_mult.o src/matrix_mult.o: ../src/matrix_mult.c \
 ../../matrix_mult_bsp/ps7_cortexa9_0/include/xmatrix_mult_hw.h:
 
 ../src/matrix_mult.h:
+
+../../matrix_mult_bsp/ps7_cortexa9_0/include/xscutimer.h:
+
+../../matrix_mult_bsp/ps7_cortexa9_0/include/xscutimer_hw.h:
