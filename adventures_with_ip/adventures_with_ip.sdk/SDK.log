@@ -5462,3 +5462,183 @@ con
 ----------------End of Script----------------
 
 18:17:32 INFO  : Launch script is exported to file 'C:\Users\Felipe\Desktop\matrix_mult_fpga\adventures_with_ip\adventures_with_ip.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_matrix_mult.elf_on_local.tcl'
+18:26:32 INFO  : Disconnected from the channel tcfchan#13.
+18:26:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248773728" && level==0} -index 1' command is executed.
+18:26:34 INFO  : 'fpga -state' command is executed.
+18:26:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:26:34 INFO  : Jtag cable 'Digilent Zed 210248773728' is selected.
+18:26:34 INFO  : 'jtag frequency' command is executed.
+18:26:34 INFO  : Sourcing of 'C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/ip_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:26:34 INFO  : Context for 'APU' is selected.
+18:26:34 INFO  : Hardware design information is loaded from 'C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/ip_design_wrapper_hw_platform_0/system.hdf'.
+18:26:34 INFO  : 'configparams force-mem-access 1' command is executed.
+18:26:34 INFO  : Context for 'APU' is selected.
+18:26:34 INFO  : 'stop' command is executed.
+18:26:35 INFO  : 'ps7_init' command is executed.
+18:26:35 INFO  : 'ps7_post_config' command is executed.
+18:26:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:26:35 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:26:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:26:36 INFO  : The application 'C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/matrix_mult/Debug/matrix_mult.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:26:36 INFO  : 'configparams force-mem-access 0' command is executed.
+18:26:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/ip_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+loadhw -hw C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/ip_design_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+dow C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/matrix_mult/Debug/matrix_mult.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:26:36 INFO  : Memory regions updated for context APU
+18:26:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:26:36 INFO  : 'con' command is executed.
+18:26:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+con
+----------------End of Script----------------
+
+18:26:36 INFO  : Launch script is exported to file 'C:\Users\Felipe\Desktop\matrix_mult_fpga\adventures_with_ip\adventures_with_ip.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_matrix_mult.elf_on_local.tcl'
+18:26:46 INFO  : Disconnected from the channel tcfchan#14.
+18:26:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248773728" && level==0} -index 1' command is executed.
+18:26:48 INFO  : 'fpga -state' command is executed.
+18:26:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:26:48 INFO  : Jtag cable 'Digilent Zed 210248773728' is selected.
+18:26:48 INFO  : 'jtag frequency' command is executed.
+18:26:48 INFO  : Sourcing of 'C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/ip_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:26:48 INFO  : Context for 'APU' is selected.
+18:26:48 INFO  : Hardware design information is loaded from 'C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/ip_design_wrapper_hw_platform_0/system.hdf'.
+18:26:48 INFO  : 'configparams force-mem-access 1' command is executed.
+18:26:48 INFO  : Context for 'APU' is selected.
+18:26:48 INFO  : 'stop' command is executed.
+18:26:49 INFO  : 'ps7_init' command is executed.
+18:26:49 INFO  : 'ps7_post_config' command is executed.
+18:26:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:26:49 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:26:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:26:50 INFO  : The application 'C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/matrix_mult/Debug/matrix_mult.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:26:50 INFO  : 'configparams force-mem-access 0' command is executed.
+18:26:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/ip_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+loadhw -hw C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/ip_design_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+dow C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/matrix_mult/Debug/matrix_mult.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:26:50 INFO  : Memory regions updated for context APU
+18:26:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:26:50 INFO  : 'con' command is executed.
+18:26:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+con
+----------------End of Script----------------
+
+18:26:50 INFO  : Launch script is exported to file 'C:\Users\Felipe\Desktop\matrix_mult_fpga\adventures_with_ip\adventures_with_ip.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_matrix_mult.elf_on_local.tcl'
+18:27:45 INFO  : Disconnected from the channel tcfchan#15.
+18:27:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248773728" && level==0} -index 1' command is executed.
+18:27:46 INFO  : 'fpga -state' command is executed.
+18:27:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:27:46 INFO  : Jtag cable 'Digilent Zed 210248773728' is selected.
+18:27:46 INFO  : 'jtag frequency' command is executed.
+18:27:46 INFO  : Sourcing of 'C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/ip_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:27:46 INFO  : Context for 'APU' is selected.
+18:27:46 INFO  : Hardware design information is loaded from 'C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/ip_design_wrapper_hw_platform_0/system.hdf'.
+18:27:46 INFO  : 'configparams force-mem-access 1' command is executed.
+18:27:46 INFO  : Context for 'APU' is selected.
+18:27:46 INFO  : 'stop' command is executed.
+18:27:47 INFO  : 'ps7_init' command is executed.
+18:27:47 INFO  : 'ps7_post_config' command is executed.
+18:27:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:27:47 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:27:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:27:47 INFO  : The application 'C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/matrix_mult/Debug/matrix_mult.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:27:47 INFO  : 'configparams force-mem-access 0' command is executed.
+18:27:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/ip_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+loadhw -hw C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/ip_design_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+dow C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/matrix_mult/Debug/matrix_mult.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:27:47 INFO  : Memory regions updated for context APU
+18:27:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:27:47 INFO  : 'con' command is executed.
+18:27:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+con
+----------------End of Script----------------
+
+18:27:47 INFO  : Launch script is exported to file 'C:\Users\Felipe\Desktop\matrix_mult_fpga\adventures_with_ip\adventures_with_ip.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_matrix_mult.elf_on_local.tcl'
+18:28:26 INFO  : Disconnected from the channel tcfchan#16.
+18:28:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248773728" && level==0} -index 1' command is executed.
+18:28:27 INFO  : 'fpga -state' command is executed.
+18:28:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:28:28 INFO  : Jtag cable 'Digilent Zed 210248773728' is selected.
+18:28:28 INFO  : 'jtag frequency' command is executed.
+18:28:28 INFO  : Sourcing of 'C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/ip_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:28:28 INFO  : Context for 'APU' is selected.
+18:28:28 INFO  : Hardware design information is loaded from 'C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/ip_design_wrapper_hw_platform_0/system.hdf'.
+18:28:28 INFO  : 'configparams force-mem-access 1' command is executed.
+18:28:28 INFO  : Context for 'APU' is selected.
+18:28:28 INFO  : 'stop' command is executed.
+18:28:28 INFO  : 'ps7_init' command is executed.
+18:28:28 INFO  : 'ps7_post_config' command is executed.
+18:28:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:28:28 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:28:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:28:29 INFO  : The application 'C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/matrix_mult/Debug/matrix_mult.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:28:29 INFO  : 'configparams force-mem-access 0' command is executed.
+18:28:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/ip_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+loadhw -hw C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/ip_design_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+dow C:/Users/Felipe/Desktop/matrix_mult_fpga/adventures_with_ip/adventures_with_ip.sdk/matrix_mult/Debug/matrix_mult.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:28:29 INFO  : Memory regions updated for context APU
+18:28:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:28:29 INFO  : 'con' command is executed.
+18:28:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248773728"} -index 0
+con
+----------------End of Script----------------
+
+18:28:29 INFO  : Launch script is exported to file 'C:\Users\Felipe\Desktop\matrix_mult_fpga\adventures_with_ip\adventures_with_ip.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_matrix_mult.elf_on_local.tcl'

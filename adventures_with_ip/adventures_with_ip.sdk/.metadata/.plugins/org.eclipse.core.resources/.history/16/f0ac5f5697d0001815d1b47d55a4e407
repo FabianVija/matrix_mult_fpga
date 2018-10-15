@@ -121,7 +121,6 @@ int main(void) {
 
 	average_elapsed = average_elapsed/TEST_REPETITIONS;
 
-	printf("Runs: %d\r\n", TEST_REPETITIONS);
 	printf("Average Elapsed: %.2f\r\n", average_elapsed);
 	printf("Min Elapsed:     %.2f\r\n", min_elapsed);
 	printf("Max Elapsed:     %.2f\r\n", max_elapsed);

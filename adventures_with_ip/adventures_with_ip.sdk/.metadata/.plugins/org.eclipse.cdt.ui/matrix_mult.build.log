@@ -1,4 +1,4 @@
-18:17:27 **** Incremental Build of configuration Debug for project matrix_mult ****
+18:28:24 **** Incremental Build of configuration Debug for project matrix_mult ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -6,7 +6,7 @@ a9-linaro-pre-build-step
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
 ../src/matrix_mult.c: In function 'main':
-../src/matrix_mult.c:137:6: warning: unused variable 'a' [-Wunused-variable]
+../src/matrix_mult.c:144:6: warning: unused variable 'a' [-Wunused-variable]
   int a = 0; // just a breakpoint for the debugger
       ^
 ../src/matrix_mult.c:74:7: warning: unused variable 'prod' [-Wunused-variable]
@@ -34,9 +34,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size matrix_mult.elf  |tee "matrix_mult.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  79488	   2604	  23360	 105452	  19bec	matrix_mult.elf
+  79584	   2604	  23360	 105548	  19c4c	matrix_mult.elf
 'Finished building: matrix_mult.elf.size'
 ' '
 
-18:17:28 Build Finished (took 1s.419ms)
+18:28:26 Build Finished (took 1s.811ms)
 

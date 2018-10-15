@@ -17,7 +17,7 @@
  */
 #define TIMER_DEVICE_ID		XPAR_XSCUTIMER_0_DEVICE_ID
 #define TIMER_LOAD_VALUE	0xFFFF
-#define TEST_REPETITIONS    500
+#define TEST_REPETITIONS    100
 
 /**************************** Type Definitions *******************************/
 
@@ -104,7 +104,7 @@ int main(void) {
 		getTimerElapsedTicks(&elapsed_ticks);
 //		printf("Elapsed: %d\r\n", elapsed_ticks);
 
-		if (first_elapsed == 0) {
+		if (first_elapsed = 0) {
 			first_elapsed = elapsed_ticks;
 		}
 
@@ -121,7 +121,6 @@ int main(void) {
 
 	average_elapsed = average_elapsed/TEST_REPETITIONS;
 
-	printf("Runs: %d\r\n", TEST_REPETITIONS);
 	printf("Average Elapsed: %.2f\r\n", average_elapsed);
 	printf("Min Elapsed:     %.2f\r\n", min_elapsed);
 	printf("Max Elapsed:     %.2f\r\n", max_elapsed);
