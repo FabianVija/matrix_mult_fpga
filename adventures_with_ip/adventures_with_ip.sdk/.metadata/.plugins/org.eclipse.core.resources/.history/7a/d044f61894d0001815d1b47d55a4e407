@@ -17,7 +17,6 @@
  */
 #define TIMER_DEVICE_ID		XPAR_XSCUTIMER_0_DEVICE_ID
 #define TIMER_LOAD_VALUE	0xFFFF
-#define TEST_REPETITIONS    100
 
 /**************************** Type Definitions *******************************/
 
@@ -74,23 +73,21 @@ int main(void) {
 	char prod[50]; // to store the result of read product
 
 	// initialize struct XMatrix_mult (multi)
-	XMatrix_mult_Initialize(&multi, XPAR_XMATRIX_MULT_0_DEVICE_ID);
 
-	// write matrices
-	int i;
-	int j=0;
-	for(i=0; i < 40; i=i+8)	{
-		XMatrix_mult_Write_a_Bytes(&multi, i, &in_mat_a[j][0], IN_A_COLS);
-		XMatrix_mult_Write_b_Bytes(&multi, i, &in_mat_b[j][0], IN_B_COLS);
-		j ++;
-	}
 
 	// set start time
-	double average_elapsed = 0;
-	double min_elapsed = 0;
-	double max_elapsed = 0;
 
-	for (int i=0; i<TEST_REPETITIONS; i++) {
+	for (int i=0; i<100; i++) {
+		XMatrix_mult_Initialize(&multi, XPAR_XMATRIX_MULT_0_DEVICE_ID);
+
+		// write matrices
+		int j=0;
+		for(int i2=0; i2 < 40; i2=i2+8)	{
+			XMatrix_mult_Write_a_Bytes(&multi, i2, &in_mat_a[j][0], IN_A_COLS);
+			XMatrix_mult_Write_b_Bytes(&multi, i2, &in_mat_b[j][0], IN_B_COLS);
+			j ++;
+		}
+
 		// start the multiplication algorithm
 		resetAndStartTimer();
 		XMatrix_mult_Start(&multi);
@@ -101,38 +98,28 @@ int main(void) {
 
 		// see difference of time
 		getTimerElapsedTicks(&elapsed_ticks);
-//		printf("Elapsed: %d\r\n", elapsed_ticks);
-
-		if (min_elapsed > elapsed_ticks || min_elapsed == 0) {
-			min_elapsed = elapsed_ticks;
-		}
-
-		if (max_elapsed < elapsed_ticks || max_elapsed == 0) {
-			max_elapsed = elapsed_ticks;
-		}
-
-		average_elapsed += elapsed_ticks;
+		printf("Elapsed: %d\r\n", elapsed_ticks);
 	}
 
-	average_elapsed = average_elapsed/TEST_REPETITIONS;
+    // read the variables
+    XMatrix_mult_Read_a_Bytes(&multi, 0, &aa[0], 40);
+    XMatrix_mult_Read_b_Bytes(&multi, 0, &bb[0], 40);
+    XMatrix_mult_Read_prod_Bytes(&multi, 0, &prod[0], 50);
 
-	printf("Average Elapsed: %.2f\r\n", average_elapsed);
-	printf("Min Elapsed:     %.2f\r\n", min_elapsed);
-	printf("Max Elapsed:     %.2f\r\n", max_elapsed);
 
-//    // read the variables
-//    XMatrix_mult_Read_a_Bytes(&multi, 0, &aa[0], 40);
-//    XMatrix_mult_Read_b_Bytes(&multi, 0, &bb[0], 40);
-//    XMatrix_mult_Read_prod_Bytes(&multi, 0, &prod[0], 50);
+    // show the variables over uart (yes it works jaja you can try it)
+//    print_matrix(aa, 40);
+//    print_matrix(bb, 40);
 
-//    // store the product in the matrix
-//    int counter = 0;
-//    for(i=0; i<IN_A_ROWS; i++){
-//    	for(j=0; j<IN_B_COLS; j++){
-//    		product[i][j] = (((short)prod[counter+1]) << 8) | (0x00ff & prod[counter]);
-//    		counter=counter+2;
-//    	}
-//    }
+    // store the product in the matrix
+    int counter = 0;
+    for(i=0; i<IN_A_ROWS; i++){
+    	for(j=0; j<IN_B_COLS; j++){
+    		product[i][j] = (((short)prod[counter+1]) << 8) | (0x00ff & prod[counter]);
+    		counter=counter+2;
+    	}
+    }
+
 
 	int a = 0; // just a breakpoint for the debugger
 

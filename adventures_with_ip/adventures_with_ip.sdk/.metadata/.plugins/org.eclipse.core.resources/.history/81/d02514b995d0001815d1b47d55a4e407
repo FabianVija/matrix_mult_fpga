@@ -101,7 +101,7 @@ int main(void) {
 
 		// see difference of time
 		getTimerElapsedTicks(&elapsed_ticks);
-//		printf("Elapsed: %d\r\n", elapsed_ticks);
+		printf("Elapsed: %d\r\n", elapsed_ticks);
 
 		if (min_elapsed > elapsed_ticks || min_elapsed == 0) {
 			min_elapsed = elapsed_ticks;
@@ -111,7 +111,7 @@ int main(void) {
 			max_elapsed = elapsed_ticks;
 		}
 
-		average_elapsed += elapsed_ticks;
+		average_elapsed += elapsed_ticks
 	}
 
 	average_elapsed = average_elapsed/TEST_REPETITIONS;

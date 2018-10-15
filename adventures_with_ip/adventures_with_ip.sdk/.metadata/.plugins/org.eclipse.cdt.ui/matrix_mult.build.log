@@ -1,4 +1,4 @@
-01:21:42 **** Incremental Build of configuration Debug for project matrix_mult ****
+18:17:27 **** Incremental Build of configuration Debug for project matrix_mult ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -6,13 +6,22 @@ a9-linaro-pre-build-step
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/matrix_mult.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../matrix_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/matrix_mult.d" -MT"src/matrix_mult.o" -o "src/matrix_mult.o" "../src/matrix_mult.c"
 ../src/matrix_mult.c: In function 'main':
-../src/matrix_mult.c:123:6: warning: unused variable 'a' [-Wunused-variable]
+../src/matrix_mult.c:137:6: warning: unused variable 'a' [-Wunused-variable]
   int a = 0; // just a breakpoint for the debugger
       ^
-../src/matrix_mult.c:68:11: warning: variable 'product' set but not used [-Wunused-but-set-variable]
+../src/matrix_mult.c:74:7: warning: unused variable 'prod' [-Wunused-variable]
+  char prod[50]; // to store the result of read product
+       ^~~~
+../src/matrix_mult.c:73:7: warning: unused variable 'bb' [-Wunused-variable]
+  char bb[40]; // to store the result of read matrix b
+       ^~
+../src/matrix_mult.c:72:7: warning: unused variable 'aa' [-Wunused-variable]
+  char aa[40]; // to store the result of read matrix a
+       ^~
+../src/matrix_mult.c:70:11: warning: unused variable 'product' [-Wunused-variable]
   mat_prod product[IN_A_ROWS][IN_B_COLS]; // to store the product
            ^~~~~~~
-../src/matrix_mult.c:50:6: warning: unused variable 'ready' [-Wunused-variable]
+../src/matrix_mult.c:52:6: warning: unused variable 'ready' [-Wunused-variable]
   int ready = 0;
       ^~~~~
 'Finished building: ../src/matrix_mult.c'
@@ -25,9 +34,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size matrix_mult.elf  |tee "matrix_mult.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  79416	   2604	  23360	 105380	  19ba4	matrix_mult.elf
+  79488	   2604	  23360	 105452	  19bec	matrix_mult.elf
 'Finished building: matrix_mult.elf.size'
 ' '
 
-01:21:44 Build Finished (took 1s.411ms)
+18:17:28 Build Finished (took 1s.419ms)
 
