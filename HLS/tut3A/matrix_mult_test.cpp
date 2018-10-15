@@ -5,21 +5,40 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-   mat_a in_mat_a[5][5] = {
-      {0, 0, 0, 0, 1},
-	  {0, 0, 0, 1, 0},
-	  {0, 0, 1, 0, 0},
-      {0, 1, 0, 0, 0},
-      {1, 0, 0, 0, 0}
-   };
-   mat_b in_mat_b[5][5] = {
-      {1, 1, 1, 1, 1},
-      {0, 1, 1, 1, 1},
-      {0, 0, 1, 1, 1},
-	  {0, 0, 0, 1, 1},
-	  {0, 0, 0, 0, 1}
-   };
-   mat_prod hw_result[5][5], sw_result[5][5];
+//   mat_a in_mat_a[5][5] = {
+//      {0, 0, 0, 0, 1},
+//	  {0, 0, 0, 1, 0},
+//	  {0, 0, 1, 0, 0},
+//      {0, 1, 0, 0, 0},
+//      {1, 0, 0, 0, 0}
+//   };
+   mat_a in_mat_a[IN_A_ROWS][IN_A_COLS];
+
+
+//   mat_b in_mat_b[5][5] = {
+//      {1, 1, 1, 1, 1},
+//      {0, 1, 1, 1, 1},
+//      {0, 0, 1, 1, 1},
+//	  {0, 0, 0, 1, 1},
+//	  {0, 0, 0, 0, 1}
+//   };
+   mat_b in_mat_b[IN_B_ROWS][IN_B_COLS];
+
+   for (int i=0; i<IN_A_ROWS; i++) {
+	   for (int j=0; j<IN_A_COLS; j++) {
+		   in_mat_a[i][j] = 0;
+		   if (i+j == IN_A_ROWS-1) {
+			   in_mat_a[i][j] = 1;
+		   }
+
+		   in_mat_b[i][j] = 0;
+		   if (i <= j) {
+			   in_mat_b[i][j] = 1;
+		   }
+	   }
+   }
+
+   mat_prod hw_result[IN_A_ROWS][IN_A_COLS], sw_result[IN_A_ROWS][IN_A_COLS];
    int error_count = 0;
 
    // Generate the expected result
